@@ -39,7 +39,7 @@ As expected, the method using the balanced sets take more time, indeed, there ar
 2. Final confusion matrix </br>
 - For the solution with class weights : the matrix is pretty relevant with most examples classified correctly. We can however see than the "Normal" prediction are more usual which is logical since there are way more "Normal" beats. The "S-beat" are as often classified as "Normal" beat as "S-beat", which seems logical since one of the difference between "S-beat" and "Normal" beat is that the "S-beat" starts earlier, which cannot be seen on windows centered around the peak. 
 - For the solution without class weights : the matrix shows poor classification for "S-beat" and "F-beat". This is probably due to the fact than every minority class is increased to half the majority class. Improvement can probably be done by training a bit longer or by having the same number of examples in each class. However it would take way more longer. 
-- 
+- For the solution without patients separation : as expected the numbers are fairly higher with a much better classification, but it only shows that the CNN memorizes patterns from patients (and not only from different beat types), which helps identifiy a similar beat from a similar patient during testing. 
 
 ## Improvements
 Improvements can be done on the solution with class weights and patient separation by : 
